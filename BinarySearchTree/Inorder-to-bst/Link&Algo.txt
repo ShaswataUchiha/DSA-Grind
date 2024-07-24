@@ -1,0 +1,8 @@
+Link ----->>>
+
+https://www.geeksforgeeks.org/construct-binary-tree-from-inorder-traversal/
+
+
+AlgoRithm ----->>>
+
+To convert a sorted array to a balanced Binary Search Tree (BST), start by defining a function inorderToBST that takes the array and the start and end indices as parameters. The base case checks if the start index s is greater than the end index e, in which case it returns NULL. If not, calculate the middle index mid as the average of s and e. Create a new node with the middle element of the array arr[mid]. Recursively construct the left subtree by calling inorderToBST with the start index s and mid - 1, and the right subtree by calling inorderToBST with mid + 1 and the end index e. Finally, return the root node. This approach ensures that the BST is balanced, as the middle element is chosen as the root at each step, splitting the array into two halves for the left and right subtrees.
