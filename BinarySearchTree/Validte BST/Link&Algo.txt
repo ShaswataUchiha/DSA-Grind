@@ -1,0 +1,26 @@
+Link ----->>>
+
+https://leetcode.com/problems/validate-binary-search-tree/
+
+
+AlgoRithm ----->>>
+
+Algorithm Explanation
+
+Function Definition:
+solve: A helper function to validate the BST by recursively checking if each node's value falls within the valid range defined by lowerBound and upperBound.
+isValidBST: The main function that initiates the validation process by calling solve with the entire tree and initial bounds.
+
+Base Case:
+If the current node (root) is NULL, return true since an empty tree is a valid BST.
+
+Conditions Check:
+Check if the current node's value is within the bounds (cond1 for upper bound and cond2 for lower bound).
+Recursively validate the left subtree with updated upper bound (root->val) and the right subtree with updated lower bound (root->val).
+
+Validation:
+If the current node's value is within bounds and both left and right subtrees are valid, return true. Otherwise, return false.
+
+Initialization:
+In isValidBST, set initial bounds to very large and very small values to encompass any possible node values.
+Call solve with the root of the tree and initial bounds to start the validation process.
